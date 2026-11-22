@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Guides | WebLearn</title>
+    <link rel="stylesheet" href="guide.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- TOP HEADER -->
+    <header class="top-header">
+        <a href="index.html" class="brand">
+            <i class="fa-solid fa-code"></i>
+            <div>
+                <h2>WebLearn</h2>
+                <span>Learn. Practice. Guide.</span>
+            </div>
+        </a>
+
+        <nav class="header-nav">
+            <a href="index.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="practice-css.html">Practice</a>
+            <a href="guide.html" class="active">Guide</a>
+        </nav>
+
+        <a href="courses.html" class="back-btn">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to Courses
+        </a>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="guide-wrapper">
+
+        <!-- HERO / HEADING -->
+        <section class="guide-hero">
+            <span class="badge-label">STEP 03 • CODING GUIDES</span>
+            <h1>Your Learning Journey: <span>Guide</span></h1>
+            <p>
+                Review your code, spot common beginner mistakes, and follow clean coding best practices
+                to make your websites neat, responsive, and error-free.
+            </p>
+
+            <!-- Filter Tabs -->
+            <div class="filter-bar">
+                <button type="button" class="filter-btn active" data-filter="all">All Guides</button>
+                <button type="button" class="filter-btn" data-filter="html-css">HTML &amp; CSS</button>
+                <button type="button" class="filter-btn" data-filter="javascript">JavaScript</button>
+                <button type="button" class="filter-btn" data-filter="quality">Best Practices</button>
+            </div>
+        </section>
+
+        <!-- 3 GUIDE CARDS -->
+        <section class="guide-grid">
+
+            <!-- CARD 01: HTML & CSS COMMON ERRORS -->
+            <article class="guide-card card-orange" data-category="html-css">
+                <div class="card-top">
+                    <div class="card-icon icon-orange">
+                        <i class="fa-solid fa-bug"></i>
+                    </div>
+                    <span class="card-num">01</span>
+                </div>
+
+                <h2>HTML &amp; CSS Common Errors</h2>
+                <p class="card-desc">
+                    Check your layout and styling against the most frequent mistakes beginners make.
+                </p>
+
+                <ul class="guide-list">
+                    <li>
+                        <strong>Unclosed HTML Tags:</strong> Make sure every opening tag like
+                        <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, or <code>&lt;section&gt;</code> has a matching closing tag.
+                    </li>
+                    <li>
+                        <strong>Wrong CSS Selector:</strong> Use a dot (<code>.</code>) for a
+                        <code>class</code> and a hash (<code>#</code>) for an <code>id</code>.
+                    </li>
+                    <li>
+                        <strong>Margin vs. Padding:</strong> <code>margin</code> adds space outside a box;
+                        <code>padding</code> adds space inside.
+                    </li>
+                    <li>
+                        <strong>Missing Semicolon:</strong> Always add a <code>;</code> at the end of
+                        each CSS property declaration.
+                    </li>
+                </ul>
+            </article>
+
+            <!-- CARD 02: JAVASCRIPT DEBUGGING -->
+            <article class="guide-card card-blue" data-category="javascript">
+                <div class="card-top">
+                    <div class="card-icon icon-blue">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <span class="card-num">02</span>
+                </div>
+
+                <h2>JavaScript Debugging Tips</h2>
+                <p class="card-desc">
+                    Button or script not working? Use these steps to find and fix issues quickly.
+                </p>
+
+                <ul class="guide-list">
+                    <li>
+                        <strong>Check Browser Console:</strong> Press <code>F12</code> or
+                        <code>Ctrl + Shift + I</code> and check the Console tab for red error messages.
+                    </li>
+                    <li>
+                        <strong>Use console.log():</strong> Log values or click events using
+                        <code>console.log()</code> to verify that your code runs as expected.
+                    </li>
+                    <li>
+                        <strong>Matching IDs:</strong> Double-check spelling and capitalization in
+                        <code>getElementById("...")</code> against your HTML.
+                    </li>
+                    <li>
+                        <strong>Script Placement:</strong> Place <code>&lt;script src="..."&gt;</code>
+                        right before the closing <code>&lt;/body&gt;</code> tag.
+                    </li>
+                </ul>
+            </article>
+
+            <!-- CARD 03: CODE QUALITY & BEST PRACTICES -->
+            <article class="guide-card card-yellow" data-category="quality">
+                <div class="card-top">
+                    <div class="card-icon icon-yellow">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <span class="card-num">03</span>
+                </div>
+
+                <h2>Code Quality &amp; Best Practices</h2>
+                <p class="card-desc">
+                    Your page works—now make it clean, readable, and easy to maintain.
+                </p>
+
+                <ul class="guide-list">
+                    <li>
+                        <strong>Proper Indentation:</strong> Keep consistent spacing inside nested
+                        HTML tags and CSS blocks.
+                    </li>
+                    <li>
+                        <strong>Semantic HTML:</strong> Use tags like <code>&lt;header&gt;</code>,
+                        <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;footer&gt;</code>
+                        instead of generic <code>&lt;div&gt;</code> elements everywhere.
+                    </li>
+                    <li>
+                        <strong>Clear Names:</strong> Use descriptive class and file names such as
+                        <code>.course-card</code> instead of <code>.box1</code>.
+                    </li>
+                    <li>
+                        <strong>Test Responsiveness:</strong> Resize your browser window to check how
+                        the layout looks on both desktop and mobile screens.
+                    </li>
+                </ul>
+            </article>
+
+        </section>
+
+        <!-- INTERACTIVE SELF-REVIEW CHECKLIST (NO DATABASE NEEDED) -->
+        <section class="checklist-section">
+            <div class="checklist-header">
+                <div>
+                    <span class="badge-label">QUICK SELF-CHECK</span>
+                    <h2>Before Submitting Your Website</h2>
+                    <p>Check off each item as you review your code:</p>
+                </div>
+                <div class="progress-badge" id="checkProgress">0 / 5 Checked</div>
+            </div>
+
+            <div class="checklist-items">
+                <label class="check-item">
+                    <input type="checkbox" class="review-check">
+                    <span>All file paths (<code>href</code> and <code>src</code>) are spelled correctly with no broken links.</span>
+                </label>
+                <label class="check-item">
+                    <input type="checkbox" class="review-check">
+                    <span>HTML tags are properly closed with no stray braces in CSS or JavaScript.</span>
+                </label>
+                <label class="check-item">
+                    <input type="checkbox" class="review-check">
+                    <span>Text colors have clear contrast against their backgrounds for easy reading.</span>
+                </label>
+                <label class="check-item">
+                    <input type="checkbox" class="review-check">
+                    <span>Buttons and interactive elements work with zero errors in the browser Console.</span>
+                </label>
+                <label class="check-item">
+                    <input type="checkbox" class="review-check">
+                    <span>Cards and navigation stay aligned on smaller screen sizes.</span>
+                </label>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SCRIPT FOR FILTER AND CHECKLIST -->
+    <script>
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        const guideCards = document.querySelectorAll(".guide-card");
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener("click", () => {
+                filterButtons.forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+
+                const selected = btn.getAttribute("data-filter");
+                guideCards.forEach(card => {
+                    const category = card.getAttribute("data-category");
+                    if (selected === "all" || category === selected) {
+                        card.style.display = "flex";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            });
+        });
+
+        const checkboxes = document.querySelectorAll(".review-check");
+        const progressBadge = document.getElementById("checkProgress");
+
+        function updateChecklistCount() {
+            const checkedCount = document.querySelectorAll(".review-check:checked").length;
+            progressBadge.textContent = `${checkedCount} / ${checkboxes.length} Checked`;
+        }
+
+        checkboxes.forEach(box => {
+            box.addEventListener("change", updateChecklistCount);
+        });
+    </script>
+
+</body>
+</html>

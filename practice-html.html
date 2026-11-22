@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Mode | WebLearn</title>
+    <link rel="stylesheet" href="html.css">
+    <link rel="stylesheet" href="practice-html.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CodeMirror Editor Style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+</head>
+<body>
+
+    <header class="top-header">
+        <div class="header-left">
+            <a href="index.html" class="brand">
+                <span>Web</span>Learn Practice
+            </a>
+        </div>
+        <div class="head-links">
+            <a href="index.html">Home</a>
+            <a href="practice-html-css-js.html">Practice</a>
+            <a href="html.html">HTML Course</a>
+            <a href="https://forms.gle/sQonif9G7UkDWfEu8" target="_blank" rel="noopener noreferrer" class="submit-output-link">
+                <i class="fa-solid fa-paper-plane"></i> Submit Output
+            </a>
+        </div>
+        <a href="html.html" class="back-headcourses">
+            <i class="fa-solid fa-arrow-left"></i> Back to Lessons
+        </a>
+    </header>
+
+    <main class="practice-page-container">
+        <div class="practice-heading">
+            <span class="lesson-category">STUDENT PLAYGROUND</span>
+            <h2>HTML Practice Mode</h2>
+            <p>Pumili ng challenge o mag-sulat ng sarili mong HTML code sa ibaba upang makita ang live preview!</p>
+        </div>
+
+        <!-- Practice Presets / Challenges -->
+        <div class="preset-buttons">
+            <button type="button" class="preset-btn active" data-preset="starter">Starter Code</button>
+            <button type="button" class="preset-btn" data-preset="image">Practice Image</button>
+            <button type="button" class="preset-btn" data-preset="video">Practice Video</button>
+            <button type="button" class="preset-btn" data-preset="audio">Practice Audio</button>
+            <button type="button" class="preset-btn" data-preset="style">Practice Styles</button>
+            <button type="button" class="preset-btn" data-preset="table">Practice Table</button>
+            <button type="button" class="preset-btn" data-preset="form">Practice Form</button>
+            <button type="button" class="preset-btn" data-preset="list">Practice Lists</button>
+        </div>
+
+        <div class="playground-split">
+            <div class="editor-container">
+                <div class="editor-topbar">
+                    <div class="editor-file">
+                        <i class="fa-brands fa-html5"></i> index.html
+                    </div>
+                    <div class="editor-actions">
+                        <button type="button" id="resetCode"><i class="fa-solid fa-rotate-left"></i> Reset</button>
+                        <button type="button" id="runCode" class="run-button"><i class="fa-solid fa-play"></i> Run Code</button>
+                    </div>
+                </div>
+
+                <textarea id="htmlEditor"></textarea>
+            </div>
+
+            <div class="preview-container">
+                <div class="preview-heading">
+                    <span><i class="fa-solid fa-eye"></i> Live Preview</span>
+                    <span>Browser Output</span>
+                </div>
+                <iframe id="htmlPreview" title="HTML live preview" sandbox="allow-scripts"></iframe>
+            </div>
+        </div>
+    </main>
+
+    <!-- CodeMirror Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
+
+    <!-- External Practice JS -->
+    <script src="practice-html.js"></script>
+</body>
+</html>

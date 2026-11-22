@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Practice Coding | WebLearn</title>
+    <link rel="stylesheet" href="practice-css.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CodeMirror Editor Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+</head>
+<body>
+
+    <header class="top-header">
+        <div class="header-left">
+            <a href="index.html" class="brand">
+                <span>Web</span>Learn
+            </a>
+        </div>
+
+        <div class="head-links">
+            <a href="index.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="css.html">CSS Lessons</a>
+            <a href="practice-css.html" style="color: #38bdf8;">CSS Practice</a>
+        </div>
+
+        <a href="courses.html" class="back-headcourses">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to Courses
+        </a>
+
+        <span class="header-label">CSS Practice</span>
+    </header>
+
+    <main class="main-content">
+        <div class="content-wrapper">
+
+            <div class="lesson-topline">
+                <span class="lesson-category">HANDS-ON CODING</span>
+                <span>CSS Practice Playground</span>
+            </div>
+
+            <div class="lesson-heading">
+                <h1>CSS Practice Coding</h1>
+                <p>
+                    Pumili ng practice activity sa ibaba, i-edit ang code sa kaliwa, at pindutin ang
+                    <strong>Run Code</strong> upang makita agad ang resulta sa kanan.
+                </p>
+            </div>
+
+            <!-- Activity Task Guide -->
+            <section class="lesson-section" id="taskGuide">
+                <span class="lesson-category" id="taskTag">ACTIVITY 01</span>
+                <h2 id="taskTitle">Task 1: Colors &amp; Text Styling</h2>
+                <p id="taskInstructions">
+                    Subukang palitan ang kulay ng heading, lakihan ang font, at lagyan ng padding ang card.
+                </p>
+                <div class="info-box">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <div id="taskHint">
+                        <strong>Tip:</strong> Siguraduhing may semicolon (<code>;</code>) sa dulo ng bawat CSS property.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Practice Playground -->
+            <section class="practice-section" id="practiceSection">
+                <div class="preset-buttons">
+                    <button class="preset-btn" data-preset="tryit">1.Try it Yourself!</button>
+                     <button class="preset-btn" data-preset="colors">2. Colors &amp; Text</button>
+                    <button class="preset-btn" data-preset="boxmodel">3. Box Model &amp; Spacing</button>
+                    <button class="preset-btn" data-preset="flexbox">4. Flexbox Card Row</button>
+                    <button class="preset-btn" data-preset="login">5. Login Card Challenge</button>
+                </div>
+
+                <div class="editor-container">
+                    <!-- Kaliwang Bahagi: Code Editor -->
+                    <div class="editor-pane">
+                        <div class="editor-topbar">
+                            <div class="editor-file">
+                                <i class="fa-brands fa-css3-alt"></i>
+                                index.html (with CSS)
+                            </div>
+                            <div class="editor-actions">
+                                <button type="button" id="resetCode">
+                                    <i class="fa-solid fa-rotate-left"></i>
+                                    Reset
+                                </button>
+                                <button type="button" id="runCode" class="run-button">
+                                    <i class="fa-solid fa-play"></i>
+                                    Run Code
+                                </button>
+                            </div>
+                        </div>
+                        <textarea id="htmlEditor" spellcheck="false"></textarea>
+                    </div>
+
+                    <!-- Kanang Bahagi: Live Preview -->
+                    <div class="preview-pane">
+                        <div class="preview-heading">
+                            <span><i class="fa-solid fa-eye"></i> Live Preview</span>
+                            <span>Browser Output</span>
+                        </div>
+                        <iframe id="htmlPreview" title="CSS Practice Preview" sandbox="allow-scripts"></iframe>
+                    </div>
+                </div>
+
+                <!-- Simple Error Summary Box -->
+                <div class="error-panel">
+                    <div class="error-panel-header">
+                        <span><i class="fa-solid fa-circle-exclamation"></i> Missing Semicolon Check</span>
+                        <span id="cssErrorCount">0 warnings</span>
+                    </div>
+                    <div class="error-list" id="cssErrorList">
+                        <div class="no-errors">
+                            <i class="fa-solid fa-check-circle"></i> Walang nakitang missing semicolon sa CSS lines.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bottom Navigation -->
+            <div class="lesson-navigation-bottom">
+                <a href="css.html" class="previous-button" style="text-decoration: none; padding: 12px 20px; border-radius: 9px; font-size: 12px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Back to CSS Lessons
+                </a>
+                <a href="courses.html" class="next-button" style="text-decoration: none; padding: 12px 20px; border-radius: 9px; font-size: 12px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">
+                    All Courses
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- CodeMirror Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
+
+    <!-- Practice Script -->
+    <script src="practice-css.js"></script>
+</body>
+</html>
